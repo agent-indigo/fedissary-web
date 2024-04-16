@@ -2,14 +2,13 @@
   "name": "fedissary-web",
   "version": "0.1.0",
   "private": true,
-  "main": "Server.mjs",
+  "main": "server.mjs",
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "activitypub-express": "^4.4.2",
-    "axios": "^1.6.7",
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.6",
     "dotenv": "^16.4.5",
@@ -19,6 +18,7 @@
     "helmet": "^7.1.0",
     "hpp": "^0.2.3",
     "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
     "multer": "^1.4.5-lts.1",
     "pg": "^8.11.3",
     "react": "^18.2.0",
@@ -30,8 +30,8 @@
     "react-scripts": "5.0.1",
     "react-toastify": "^10.0.4",
     "sequelize": "^6.37.0",
-    "sequelize-cli": "^6.6.2",
     "sharp": "^0.33.2",
+    "tailwindcss": "^3.4.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -39,8 +39,10 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "nodemon Server",
-    "stack": "concurrently \"react-scripts start\" \"nodemon Server\""
+    "seed": "node utilities/seeder.mjs -s",
+    "delete": "node utilities/seeder.mjs -d",
+    "server": "nodemon server",
+    "stack": "concurrently \"react-scripts start\" \"nodemon server\""
   },
   "eslintConfig": {
     "extends": [
@@ -61,9 +63,18 @@
     ]
   },
   "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/react": "^18.2.79",
+    "@types/react-dom": "^18.2.25",
+    "@types/sequelize": "^4.28.20",
     "concurrently": "^8.2.2",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-react": "^1.1.7",
     "nodemon": "^3.0.3",
-    "serve": "^14.2.1",
-    "tailwindcss": "^3.4.1"
+    "prettier": "^2.8.8",
+    "prettier-plugin-tailwind": "^2.2.12",
+    "sequelize-cli": "^6.6.2",
+    "serve": "^14.2.1"
   }
 }

@@ -1,14 +1,10 @@
 # dependencies
 node_modules/
-.pnp/
-**/.pnp.js
-# testing
-coverage/
 # production
 build/
-# misc
-**/.DS_Store
 # environment variables
-**/*.env*
-# logs
-**/*.log*
+.env
+# custom morgan log
+log.csv
+# misc
+.DS_Store
