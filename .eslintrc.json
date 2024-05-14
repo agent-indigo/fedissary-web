@@ -2,12 +2,5 @@
   "extends": [
     "react-app",
     "react-app/jest"
-  ],
-  "plugins": ["prettier"],
-  "overrides": [
-    {
-      "files": ["**/*.{jsx,tsx}"],
-      "extends": ["plugin:prettier/recommended"]
-    }
   ]
 }

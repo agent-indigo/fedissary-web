@@ -1,7 +1,5 @@
-/**
- * @type  {import('tailwindcss').Config}
- */
-const config = {
+import type {Config} from 'tailwindcss'
+const config: Config = {
   content: ["./src/**/*.{jsx,tsx}"],
   plugins: [require('daisyui')],
   daisyui: {
