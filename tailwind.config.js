@@ -1,5 +1,4 @@
-import type {Config} from 'tailwindcss'
-const config: Config = {
+const config = {
   content: ["./src/**/*.{jsx,tsx}"],
   plugins: [require('daisyui')],
   daisyui: {
