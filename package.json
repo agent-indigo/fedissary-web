@@ -70,6 +70,8 @@
     ]
   },
   "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/sequelize": "^4.28.20",
     "autoprefixer": "^10.4.19",
     "concurrently": "^8.2.2",
     "eslint": "^8.57.0",
