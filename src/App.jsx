@@ -1,5 +1,5 @@
-import 'bootswatch/dist/cerulean/bootstrap.css'
 import 'react-toastify/dist/ReactToastify.css'
+import './App.css'
 const App = () => {
   return (
     <>

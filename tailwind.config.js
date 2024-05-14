@@ -1,7 +1,14 @@
 /**
  * @type  {import('tailwindcss').Config}
  */
-const Config = {
-  content: ["./src/**/*.{jsx,tsx}"]
+const config = {
+  content: ["./src/**/*.{jsx,tsx}"],
+  plugins: [require('daisyui')],
+  daisyui: {
+    themes: [
+      "aqua",
+      "night"
+    ]
+  }
 }
-export default Config
+export default config
