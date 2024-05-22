@@ -1,5 +1,5 @@
-const config = {
-  content: ["./src/**/*.{jsx,tsx}"],
+const tailwindConfig = {
+  content: ['**/*.{jsx,tsx}'],
   plugins: [require('daisyui')],
   daisyui: {
     themes: [
@@ -8,4 +8,4 @@ const config = {
     ]
   }
 }
-export default config
+export default tailwindConfig
