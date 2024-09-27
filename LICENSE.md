@@ -1,5 +1,4 @@
-GNU General Public License
-==========================
+# GNU General Public License
 
 _Version 3, 29 June 2007_  
 _Copyright © 2007 Free Software Foundation, Inc. &lt;<http://fsf.org/>&gt;_
@@ -539,7 +538,7 @@ law that most closely approximates an absolute waiver of all civil liability in
 connection with the Program, unless a warranty or assumption of liability accompanies
 a copy of the Program in return for a fee.
 
-_END OF TERMS AND CONDITIONS_
+### _END OF TERMS AND CONDITIONS_
 
 ## How to Apply These Terms to Your New Programs
 
@@ -552,8 +551,8 @@ to the start of each source file to most effectively state the exclusion of warr
 and each file should have at least the “copyright” line and a pointer to
 where the full notice is found.
 
-    <one line to give the program's name and a brief idea of what it does.>
-    Copyright (C) <year>  <name of author>
+    <Fedissary | Decentralized social media app using ActivityPub | React Web Client>
+    Copyright (C) <2024>  <The Fedissary Project>
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -573,7 +572,7 @@ Also add information on how to contact you by electronic and paper mail.
 If the program does terminal interaction, make it output a short notice like this
 when it starts in an interactive mode:
 
-    <program>  Copyright (C) <year>  <name of author>
+    <Fedissary | Decentralized social media app using ActivityPub | React Web Client>  Copyright (C) <2024>  <The Fedissary Project>
     This program comes with ABSOLUTELY NO WARRANTY; for details type 'show w'.
     This is free software, and you are welcome to redistribute it
     under certain conditions; type 'show c' for details.

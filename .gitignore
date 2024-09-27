@@ -1,10 +1,2 @@
-# dependencies
 node_modules/
-# production
 build/
-# environment variables
-.env
-# custom morgan log
-log.csv
-# misc
-.DS_Store

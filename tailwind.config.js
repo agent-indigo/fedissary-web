@@ -1,6 +1,11 @@
+import daisyui from 'daisyui'
 const tailwindConfig = {
-  content: ['**/*.{jsx,tsx}'],
-  plugins: [require('daisyui')],
+  content: [
+    '**/*.{jsx,tsx}'
+  ],
+  plugins: [
+    daisyui
+  ],
   daisyui: {
     themes: [
       "aqua",
