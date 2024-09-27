@@ -2,9 +2,9 @@
 
 ## Description
 
-React.js Web Client for a decentralized social media app using ActivityPub and Matrix.
+React.js Web Client for a decentralized social media application using ActivityPub and Matrix.
 
-## Other Repositories
+## Links
 
 - [Express.js API](https://github.com/agent-indigo/fedissary-api)
 
