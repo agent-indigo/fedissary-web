@@ -2,7 +2,7 @@
 
 ## Description
 
-React Web Client for a decentralized social media app using ActivityPub and Matrix.
+React.js Web Client for a decentralized social media app using ActivityPub and Matrix.
 
 ## Express.js API
 
