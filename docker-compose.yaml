@@ -1,0 +1,19 @@
+services:
+  database:
+    image: 'postgres:latest'
+    volumes:
+      - database:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: fedissary
+    ports:
+      - 5432
+  fedissary-web:
+    image: fedissary-web:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 443:8080
+    depends_on:
+      - database
