@@ -1,18 +1,20 @@
-package org.fedissary.web.abstracts;
+package org.fedissary.web.entities;
 import java.time.LocalDateTime;
 import java.util.UUID;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
+import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import jakarta.persistence.MappedSuperclass;
 import lombok.Data;
 @Data
-@MappedSuperclass
-public abstract class DataEntity {
+@Entity
+public final class Bookmark {
   @Id
   private final UUID id = UUID.randomUUID();
+  private Account account_id;
+  private Status status_id;
   @CreatedDate
-  private final LocalDateTime createdAt = LocalDateTime.now();
+  private final LocalDateTime created_at = LocalDateTime.now();
   @LastModifiedDate
-  private LocalDateTime updatedAt = LocalDateTime.now();
+  private LocalDateTime updated_at;
 }

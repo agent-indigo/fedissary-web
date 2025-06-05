@@ -15,10 +15,10 @@ import org.springframework.security.web.access.expression.DefaultWebSecurityExpr
 @EnableWebSecurity
 public class SecurityConfig {
   @Autowired
-  private UserService userService = new UserService();
-  private DaoAuthenticationProvider daoAuthenticationProvider = new DaoAuthenticationProvider();
-  private DefaultWebSecurityExpressionHandler defaultWebSecurityExpressionHandler = new DefaultWebSecurityExpressionHandler();
-  private DefaultMethodSecurityExpressionHandler defaultMethodSecurityExpressionHandler = new DefaultMethodSecurityExpressionHandler();
+  private final UserService userService = new UserService();
+  private final DaoAuthenticationProvider daoAuthenticationProvider = new DaoAuthenticationProvider();
+  private final DefaultWebSecurityExpressionHandler defaultWebSecurityExpressionHandler = new DefaultWebSecurityExpressionHandler();
+  private final DefaultMethodSecurityExpressionHandler defaultMethodSecurityExpressionHandler = new DefaultMethodSecurityExpressionHandler();
   @Bean
   public BCryptPasswordEncoder passwordEncoder() {
     return new BCryptPasswordEncoder(12);

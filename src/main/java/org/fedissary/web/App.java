@@ -11,7 +11,7 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan(
   basePackages = {
   	"org.fedissary.web.config",
-  	"org.fedissary.web.controllers.rest",
+  	"org.fedissary.web.controllers",
   	"org.fedissary.web.interfaces.repositories",
   	"org.fedissary.web.services"
   }

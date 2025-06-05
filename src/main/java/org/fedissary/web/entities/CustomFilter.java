@@ -1,0 +1,31 @@
+package org.fedissary.web.entities;
+import java.time.LocalDateTime;
+import java.util.Set;
+import java.util.UUID;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
+import jakarta.annotation.Nullable;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Lob;
+import lombok.Data;
+@Data
+@Entity
+public final class CustomFilter {
+  @Id
+  private final UUID id = UUID.randomUUID();
+  @Nullable
+  private Account account_id;
+  @Lob
+  private String phrase;
+  // This should be represented as `_text` in the PostgreSQL database.
+  private Set<String> context;
+  private Boolean irreversible = false;
+  private Boolean whole_word = false;
+  @Nullable
+  private LocalDateTime expires_at;
+  @CreatedDate
+  private final LocalDateTime created_at = LocalDateTime.now();
+  @LastModifiedDate
+  private LocalDateTime updated_at;
+}
