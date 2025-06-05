@@ -15,7 +15,9 @@ public final class AccountConversation {
   private final UUID id = UUID.randomUUID();
   private Account account_id;
   private Conversation conversation_id;
+  // This should be represented as `_text` in the PostgreSQL database.
   private Set<UUID> participant_account_ids;
+  // This should be represented as `_text` in the PostgreSQL database.
   private Set<UUID> status_ids;
   private Float lock_version;
   private Boolean unread;

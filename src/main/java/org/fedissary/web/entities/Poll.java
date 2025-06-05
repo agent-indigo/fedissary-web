@@ -20,7 +20,9 @@ public final class Poll {
   @Nullable
   private Status status_id;
   @Lob
+  // This should be represented as `_text` in the PostgreSQL database.
   private Set<String> options;
+  // This should be represented as `_text` in the PostgreSQL database.
   private List<Integer> cached_tallies;
   private Boolean multiple = false;
   private Boolean hide_totals = false;
