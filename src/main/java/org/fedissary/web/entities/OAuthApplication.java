@@ -10,6 +10,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Index;
 import jakarta.persistence.Lob;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.Data;
 @Data
@@ -25,7 +26,8 @@ public final class OAuthApplication {
   @Id
   private final UUID id = UUID.randomUUID();
   @Nullable
-  private User owner_id;
+  @ManyToOne
+  private RegisteredUser owner_id;
   @Lob
   private UID uid;
   @Lob

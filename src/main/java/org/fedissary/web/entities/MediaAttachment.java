@@ -4,12 +4,13 @@ import java.time.LocalDateTime;
 import java.util.UUID;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
-import com.nimbusds.common.contenttype.ContentType;
+import org.springframework.util.MimeType;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Lob;
+import jakarta.persistence.ManyToOne;
 import lombok.Data;
 @Data
 @Entity
@@ -17,10 +18,13 @@ public final class MediaAttachment {
   @Id
   private final UUID id = UUID.randomUUID();
   @Nullable
-  private Status status_id;
-  @Nullable
+  @ManyToOne
   private Account account_id;
   @Nullable
+  @ManyToOne
+  private Status status_id;
+  @Nullable
+  @ManyToOne
   private ScheduledStatus scheduled_status_id;
   @Lob
   @Nullable
@@ -37,7 +41,7 @@ public final class MediaAttachment {
   private String file_file_name;
   @Lob
   @Nullable
-  private ContentType file_content_type;
+  private MimeType file_content_type;
   @Nullable
   private Float file_file_size;
   @Lob

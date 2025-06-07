@@ -9,6 +9,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Index;
 import jakarta.persistence.Lob;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.Data;
 @Data
@@ -24,6 +25,7 @@ public final class Tombstone {
   @Id
   private final UUID id = UUID.randomUUID();
   @Nullable
+  @ManyToOne
   private Account account_id;
   @Lob
   private URI uri;

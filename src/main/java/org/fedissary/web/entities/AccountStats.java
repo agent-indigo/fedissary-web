@@ -6,12 +6,14 @@ import org.springframework.data.annotation.LastModifiedDate;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
 import lombok.Data;
 @Data
 @Entity
 public final class AccountStats {
   @Id
   private final UUID id = UUID.randomUUID();
+  @OneToOne
   private Account account_id;
   private Integer statuses_count = 0;
   private Integer following_count = 0;

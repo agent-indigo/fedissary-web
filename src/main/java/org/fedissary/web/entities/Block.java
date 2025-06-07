@@ -8,13 +8,16 @@ import jakarta.annotation.Nullable;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Lob;
+import jakarta.persistence.ManyToOne;
 import lombok.Data;
 @Data
 @Entity
 public final class Block {
   @Id
   private final UUID id = UUID.randomUUID();
+  @ManyToOne
   private Account account_id;
+  @ManyToOne
   private Account target_account_id;
   @Lob
   @Nullable

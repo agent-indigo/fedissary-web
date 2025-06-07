@@ -5,13 +5,16 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import lombok.Data;
 @Data
 @Entity
 public final class Mute {
   @Id
   private final UUID id = UUID.randomUUID();
+  @ManyToOne
   private Account account_id;
+  @ManyToOne
   private Account target_account_id;
   private Boolean hide_notifications = true;
   @CreatedDate

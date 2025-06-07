@@ -11,6 +11,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Index;
 import jakarta.persistence.Lob;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.Data;
 @Data
@@ -25,12 +26,16 @@ import lombok.Data;
 public final class Status {
   @Id
   private final UUID id = UUID.randomUUID();
+  @ManyToOne
   private Account account_id;
   @Nullable
+  @ManyToOne
   private Status in_reply_to_id;
   @Nullable
+  @ManyToOne
   private Status reblog_of_id;
   @Nullable
+  @ManyToOne
   private Account in_reply_to_account_id;
   @Lob
   @Nullable

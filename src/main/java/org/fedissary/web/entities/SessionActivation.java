@@ -6,14 +6,18 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Lob;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
 import lombok.Data;
 @Data
 @Entity
 public final class SessionActivation {
   @Id
   private final UUID id = UUID.randomUUID();
-  private User user_id;
+  @ManyToOne
+  private RegisteredUser user_id;
   @Nullable
+  @OneToOne
   private OAuthAccessToken access_token_id;
   @Lob
   @Column(

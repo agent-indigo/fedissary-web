@@ -7,6 +7,7 @@ import jakarta.annotation.Nullable;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Lob;
+import jakarta.persistence.OneToOne;
 import lombok.Data;
 @Data
 @Entity
@@ -14,8 +15,10 @@ public final class AccountMigration {
   @Id
   private final UUID id = UUID.randomUUID();
   @Nullable
+  @OneToOne
   private Account account_id;
   @Nullable
+  @OneToOne
   private Account target_account_id;
   @Lob
   private String acct;

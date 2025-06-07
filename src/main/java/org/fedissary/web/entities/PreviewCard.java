@@ -2,10 +2,9 @@ package org.fedissary.web.entities;
 import java.net.URL;
 import java.time.LocalDateTime;
 import java.util.UUID;
-import javax.swing.text.html.HTML;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
-import com.nimbusds.common.contenttype.ContentType;
+import org.springframework.util.MimeType;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -28,7 +27,7 @@ public final class PreviewCard {
   private String description;
   private Integer type;
   @Lob
-  private HTML html;
+  private String html;
   @Lob
   private String author_name;
   @Lob
@@ -46,7 +45,7 @@ public final class PreviewCard {
   private String image_file_name;
   @Lob
   @Nullable
-  private ContentType image_content_type;
+  private MimeType image_content_type;
   @Nullable
   private Float image_file_size;
   @Nullable

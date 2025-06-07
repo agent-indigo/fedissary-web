@@ -6,15 +6,19 @@ import org.springframework.data.annotation.LastModifiedDate;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import lombok.Data;
 @Data
 @Entity
 public final class ListAccount {
   @Id
   private final UUID id = UUID.randomUUID();
-  private AccountList list_id;
+  @ManyToOne
   private Account account_id;
+  @ManyToOne
+  private AccountList list_id;
   @Nullable
+  @ManyToOne
   private Follow follow_id;
   @CreatedDate
   private final LocalDateTime created_at = LocalDateTime.now();

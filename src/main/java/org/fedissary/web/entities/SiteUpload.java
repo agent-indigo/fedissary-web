@@ -3,7 +3,7 @@ import java.time.LocalDateTime;
 import java.util.UUID;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
-import com.nimbusds.common.contenttype.ContentType;
+import org.springframework.util.MimeType;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -25,7 +25,7 @@ public final class SiteUpload {
   private String file_file_name;
   @Lob
   @Nullable
-  private ContentType file_content_type;
+  private MimeType file_content_type;
   @Nullable
   private Float file_file_size;
   @Lob

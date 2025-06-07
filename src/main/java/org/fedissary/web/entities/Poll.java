@@ -9,6 +9,8 @@ import jakarta.annotation.Nullable;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Lob;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
 import lombok.Data;
 @Data
 @Entity
@@ -16,8 +18,10 @@ public final class Poll {
   @Id
   private final UUID id = UUID.randomUUID();
   @Nullable
+  @ManyToOne
   private Account account_id;
   @Nullable
+  @OneToOne
   private Status status_id;
   @Lob
   // This should be represented as `_text` in the PostgreSQL database.

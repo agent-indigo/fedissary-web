@@ -6,13 +6,16 @@ import org.springframework.data.annotation.LastModifiedDate;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Lob;
+import jakarta.persistence.ManyToOne;
 import lombok.Data;
 @Data
 @Entity
 public final class ReportNote {
   @Id
   private final UUID id = UUID.randomUUID();
+  @ManyToOne
   private Report report_id;
+  @ManyToOne
   private Account account_id;
   @Lob
   private String content;

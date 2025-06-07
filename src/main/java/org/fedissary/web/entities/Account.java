@@ -6,12 +6,13 @@ import java.util.Set;
 import java.util.UUID;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
-import com.nimbusds.common.contenttype.ContentType;
+import org.springframework.util.MimeType;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Index;
 import jakarta.persistence.Lob;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.Data;
 @Data
@@ -27,6 +28,7 @@ public final class Account {
   @Id
   private final UUID id = UUID.randomUUID();
   @Nullable
+  @OneToOne
   private Account moved_to_account_id;
   @Lob
   private URI uri;
@@ -65,7 +67,7 @@ public final class Account {
   private String avatar_file_name;
   @Lob
   @Nullable
-  private ContentType avatar_content_type;
+  private MimeType avatar_content_type;
   @Lob
   @Nullable
   private Float avatar_file_size;
@@ -76,7 +78,7 @@ public final class Account {
   private String header_file_name;
   @Lob
   @Nullable
-  private ContentType header_content_type;
+  private MimeType header_content_type;
   @Nullable
   private Float header_file_size;
   @Nullable

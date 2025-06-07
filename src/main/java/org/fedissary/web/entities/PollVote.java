@@ -8,6 +8,7 @@ import jakarta.annotation.Nullable;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Lob;
+import jakarta.persistence.ManyToOne;
 import lombok.Data;
 @Data
 @Entity
@@ -15,8 +16,10 @@ public final class PollVote {
   @Id
   private final UUID id = UUID.randomUUID();
   @Nullable
+  @ManyToOne
   private Account account_id;
   @Nullable
+  @ManyToOne
   private Poll poll_id;
   private Integer choice;
   @Lob

@@ -13,10 +13,16 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Lob;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
+import jakarta.persistence.Table;
 import lombok.Data;
 @Data
 @Entity
-public final class User implements UserDetails {
+@Table(
+  name = "users"
+)
+public final class RegisteredUser implements UserDetails {
   @Id
   private final UUID id = UUID.randomUUID();
   @Lob
@@ -40,8 +46,10 @@ public final class User implements UserDetails {
   private Boolean accountNonLocked;
   private Boolean credentialsNonExpired;
   private Boolean enabled;
+  @OneToOne
   private Account account_id;
   @Nullable
+  @OneToOne
   private Invite invite_id;
   @Lob
   @Nullable
@@ -111,6 +119,7 @@ public final class User implements UserDetails {
   // This should be represented as `_text` in the PostgreSQL database.
   private Set<String> chosen_languages;
   @Nullable
+  @ManyToOne
   private OAuthApplication created_by_application_id;
   @CreatedDate
   private final LocalDateTime created_at = LocalDateTime.now();

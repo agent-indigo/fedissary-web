@@ -5,12 +5,14 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
 import lombok.Data;
 @Data
 @Entity
 public final class StatusStats {
   @Id
   private final UUID id = UUID.randomUUID();
+  @OneToOne
   private Status status_id;
   private Integer replies_count = 0;
   private Integer reblogs_count = 0;

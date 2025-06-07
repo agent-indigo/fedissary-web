@@ -7,13 +7,16 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Lob;
+import jakarta.persistence.ManyToOne;
 import lombok.Data;
 @Data
 @Entity
 public final class Notification {
   @Id
   private final UUID id = UUID.randomUUID();
+  @ManyToOne
   private Account account_id;
+  @ManyToOne
   private Account from_account_id;
   @Lob
   @Column(

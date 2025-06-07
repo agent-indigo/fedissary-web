@@ -9,14 +9,17 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Lob;
+import jakarta.persistence.ManyToOne;
 import lombok.Data;
 @Data
 @Entity
 public final class OAuthAccessGrant {
   @Id
   private final UUID id = UUID.randomUUID();
+  @ManyToOne
   private OAuthApplication application_id;
-  private User resource_owner_id;
+  @ManyToOne
+  private RegisteredUser resource_owner_id;
   @Lob
   @Column(
     unique = true

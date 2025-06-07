@@ -7,13 +7,15 @@ import jakarta.annotation.Nullable;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Lob;
+import jakarta.persistence.ManyToOne;
 import lombok.Data;
 @Data
 @Entity
 public final class Invite {
   @Id
   private final UUID id = UUID.randomUUID();
-  private User user_id;
+  @ManyToOne
+  private RegisteredUser user_id;
   @Lob
   @Nullable
   private String code;

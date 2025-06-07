@@ -7,6 +7,7 @@ import jakarta.annotation.Nullable;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Lob;
+import jakarta.persistence.ManyToOne;
 import lombok.Data;
 @Data
 @Entity
@@ -14,8 +15,10 @@ public final class WebPushSubscription {
   @Id
   private final UUID id = UUID.randomUUID();
   @Nullable
+  @ManyToOne
   private OAuthAccessToken access_token_id;
-  private User user_id;
+  @ManyToOne
+  private RegisteredUser user_id;
   @Lob
   private String endpoint;
   @Lob
