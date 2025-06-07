@@ -17,7 +17,7 @@ public final class Marker {
   private final UUID id = UUID.randomUUID();
   @Nullable
   @ManyToOne
-  private RegisteredUser user_id;
+  private User user_id;
   @Lob
   @Column(
     unique = true

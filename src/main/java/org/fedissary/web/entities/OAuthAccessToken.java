@@ -20,7 +20,7 @@ public final class OAuthAccessToken {
   private OAuthApplication application_id;
   @Nullable
   @ManyToOne
-  private RegisteredUser resource_owner_id;
+  private User resource_owner_id;
   @Lob
   @Column(
     unique = true

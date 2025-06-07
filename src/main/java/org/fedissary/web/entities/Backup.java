@@ -17,7 +17,7 @@ public final class Backup {
   private final UUID id = UUID.randomUUID();
   @Nullable
   @ManyToOne
-  private RegisteredUser user_id;
+  private User user_id;
   private Boolean processed = false;
   @Lob
   @Nullable

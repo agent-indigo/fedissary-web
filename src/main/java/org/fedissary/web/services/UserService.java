@@ -1,7 +1,7 @@
 package org.fedissary.web.services;
 import java.util.UUID;
 import org.apache.coyote.BadRequestException;
-import org.fedissary.web.entities.RegisteredUser;
+import org.fedissary.web.entities.User;
 import org.fedissary.web.interfaces.repositories.UserRepository;
 import org.fedissary.web.records.NewPassword;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 public final class UserService implements UserDetailsService {
   @Autowired
   private UserRepository userRepository;
-  private RegisteredUser target;
+  private User target;
   private final BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder(12);
   public UserDetails loadUserByUsername(String username) {
     return userRepository.findByUsername(username);

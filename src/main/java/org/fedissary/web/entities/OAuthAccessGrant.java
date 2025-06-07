@@ -19,7 +19,7 @@ public final class OAuthAccessGrant {
   @ManyToOne
   private OAuthApplication application_id;
   @ManyToOne
-  private RegisteredUser resource_owner_id;
+  private User resource_owner_id;
   @Lob
   @Column(
     unique = true

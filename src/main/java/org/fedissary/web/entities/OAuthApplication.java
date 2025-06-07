@@ -27,7 +27,7 @@ public final class OAuthApplication {
   private final UUID id = UUID.randomUUID();
   @Nullable
   @ManyToOne
-  private RegisteredUser owner_id;
+  private User owner_id;
   @Lob
   private UID uid;
   @Lob

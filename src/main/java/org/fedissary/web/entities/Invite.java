@@ -15,7 +15,7 @@ public final class Invite {
   @Id
   private final UUID id = UUID.randomUUID();
   @ManyToOne
-  private RegisteredUser user_id;
+  private User user_id;
   @Lob
   @Nullable
   private String code;

@@ -15,7 +15,7 @@ public final class SessionActivation {
   @Id
   private final UUID id = UUID.randomUUID();
   @ManyToOne
-  private RegisteredUser user_id;
+  private User user_id;
   @Nullable
   @OneToOne
   private OAuthAccessToken access_token_id;

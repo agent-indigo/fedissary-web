@@ -18,7 +18,7 @@ public final class WebPushSubscription {
   @ManyToOne
   private OAuthAccessToken access_token_id;
   @ManyToOne
-  private RegisteredUser user_id;
+  private User user_id;
   @Lob
   private String endpoint;
   @Lob

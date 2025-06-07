@@ -22,7 +22,7 @@ import lombok.Data;
 @Table(
   name = "users"
 )
-public final class RegisteredUser implements UserDetails {
+public final class User implements UserDetails {
   @Id
   private final UUID id = UUID.randomUUID();
   @Lob
